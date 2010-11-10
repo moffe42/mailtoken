@@ -1,0 +1,49 @@
+Using mailtoken authentication with and SimpleSAMLphp
+=====================================================
+
+To use mailtoken as an authentication source you need to do the following.
+
+  * Enable the module
+  * Set up the database
+  * Set up the authsources.php
+  * Edit mail text
+
+First thing to do is to enable the module
+
+    touch PATHTOSIMPLESAML/module/mailtoken/enable
+
+After that you need to set up the table, that mailtoken uses. First set up
+a database e.g. MySQL, PostgreSQL ect.) You can only use dabases that have
+drivers implemented in PDO.
+
+Here is the initialization SQL script for MySQL
+
+    CREATE TABLE `mailtoken__tokens` (
+      `id` int(11) NOT NULL auto_increment,
+      `mail` varchar(320) NOT NULL,
+      `token` varchar(255) NOT NULL,
+      `notvalidafter` varchar(255) NOT NULL,
+      `usedat` varchar(255) default NULL,
+      PRIMARY KEY  (`id`),
+      UNIQUE KEY `token` (`token`)
+    ) ENGINE=MyISAM DEFAULT CHARSET=latin1
+
+After you have set up your database you need to modify authsources.php in
+config dir. Change the code below to fit your needs.
+
+    'mailtoken' => array(
+        'janus:MailToken',
+        'dsn' => 'mysql:host=localhost;dbname=database_db',
+        'username' => 'THEUSERNAME',
+        'password' => 'THEPASSWORD',
+        'table' => 'mailtoken__tokens',
+    ),
+
+The last thing you need to do is to configuer the actual text that is mailed to
+the users. Copy the config file template to SSP's config dir
+
+    cp PATHTOSIMPELSAML/module/mailtoken/config-templates/module_mailtoken PATHTOSIMPLESAML/config/ 
+
+I the config file you can edit the apparence of the email send. You can also
+add email texts in different languages. REMEMBER to change the from and reply-to
+addresses.
