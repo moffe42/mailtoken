@@ -111,11 +111,11 @@ class sspmod_mailtoken_Auth_Source_MailToken extends SimpleSAML_Auth_Source
     /**
      * Handle login request
      *
-     * This function is used by the login form (janus/www/mailtoken.php) when the
-     * user enters an email address. If the token is valid it will not return. If
-     * the email address of the token is known a new token is send to the email
-     * address. If no token is givan and the given email address is valid a token
-     * is send to the email address. On error an error code will be returned.
+     * This function is used by the login form when the user enters an email 
+     * address. If the token is valid it will not return. If the email address 
+     * of the token is known a new token is send to the email address. If no 
+     * token is givan and the given email address is valid a token is send to 
+     * the email address. On error an error code will be returned.
      *
      * @param string $authStateId The identifier of the authentication state
      * @param string $mail        The email address enterd
