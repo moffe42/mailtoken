@@ -6,7 +6,7 @@
 		"en": "An error has occured. Please try again."
 	},
 	"send_mail_new_token": {
-		"en": "JANUS has registered the email address.<br \/>\n        An email with a link has been sent to %USERMAIL%.<br \/>\n        To log into the JANUS, click the link in the email."
+		"en": "APP has registered the email address.<br \/>\n        An email with a link has been sent to %USERMAIL%.<br \/>\n        To log into the APP, click the link in the email."
 	},
 	"send_mail_new_token_by_old": {
 		"en": "It is not possible to reuse your login link.<br \/>You will receive a mail containing a new login link."
