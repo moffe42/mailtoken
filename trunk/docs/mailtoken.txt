@@ -32,7 +32,7 @@ After you have set up your database you need to modify authsources.php in
 config dir. Change the code below to fit your needs.
 
     'mailtoken' => array(
-        'janus:MailToken',
+        'mailtoken:MailToken',
         'dsn' => 'mysql:host=localhost;dbname=database_db',
         'username' => 'THEUSERNAME',
         'password' => 'THEPASSWORD',
