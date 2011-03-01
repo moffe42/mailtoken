@@ -1,0 +1,23 @@
+div.mailtoken {
+    border-left: 1px solid #e8e8e8;
+    border-bottom: 1px solid #e8e8e8;
+    background: #f5f5f5;
+}
+
+h2.mailtoken {
+    break: both;
+}
+
+img.mailtoken {
+    float: left;
+    margin: 15px;
+}
+
+td.mailtoken_1 {
+    padding: .3em;
+}
+
+td.mailtoken_2 {
+    padding: .4em;
+}
+

@@ -5,7 +5,7 @@
 
     $this->includeAtTemplateBase('includes/header.php');
     
-    $this->data['head']  = '<link rel="stylesheet" type="text/css" href="/' . $this->data['baseurlpath'] . 'module.php/janus/resources/style.css" />' .
+    $this->data['head']  = '<link rel="stylesheet" type="text/css" href="/' . $this->data['baseurlpath'] . 'module.php/mailtoken/resources/style.css" />' .
  "\n";
     
     $showform = FALSE;
