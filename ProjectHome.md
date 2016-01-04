@@ -1,0 +1,1 @@
+This is a simple auth source moduel for SimpleSAMLphp, that grants access on the basis of a user supplied email adress.
